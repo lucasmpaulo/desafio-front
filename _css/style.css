@@ -1,0 +1,195 @@
+*,
+body,
+html {
+  margin: 0;
+	padding: 0;
+}
+
+body {
+  font-style: Georgia, serif;
+  color: #fff;
+  background:rgba(211, 211, 211, 0.6);;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Container geral */
+.container {
+  min-width: 960px;
+  min-height: 600px;
+  margin: 0 auto;
+	display: grid;
+}
+
+/* Container criado para o menu */
+.container-menu {
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+}
+
+/* Container para a imagem do painel */
+.container-imagem {
+	margin: 0 auto;
+	justify-self: center;
+	align-self: center;
+	-webkit-box-shadow: inset -1px 3px 8px 5px #a10d0dcc, 2px 5px 16px 3px #680d0dcc, 5px 5px 15px 5px rgba(0,0,0,0); 
+	box-shadow: inset -1px 3px 8px 5px #a10d0dcc, 2px 4px 12px 3px #680d0dcc, 5px 5px 15px 5px rgba(0,0,0,0);
+	border-radius: 8px;
+}
+
+.container-imagem .painel {
+	border-radius: 8px;
+}
+
+.ponteiro-1, .ponteiro-2 {
+	position: absolute
+}
+
+.ponteiro-1 h1 {
+	position: relative;
+	top: -11rem;
+	right: -11rem;
+	z-index: 5;
+}
+
+.ponteiro-1 img {
+	position: relative;
+	top: -12.6em;
+	right: -6.8rem;
+	transform: rotateZ(-39deg);
+}
+
+.ponteiro-2 img {
+	position: relative;
+	top: -10rem;
+	right: -36rem;
+	transform: rotateZ(-45deg);
+}
+
+/* Estilo do Menu superior */
+.menu {
+	background: rgba(161, 13, 13, .6);	
+	grid-column: 1 / 4;
+}
+
+.menu ul {
+  display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	justify-content: flex-end;
+	margin-right: 2rem;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, .7);
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+	letter-spacing: 0.1em;
+	transition: color .3s;
+}
+
+.menu li a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer {
+	text-align: center;
+	background: rgba(161, 13, 13, .6);	
+	padding: 20px 0;
+}
+
+@media (max-height: 560px) {
+	footer {
+		display: none;
+	}
+}
+
+/* Ativação da animação */
+.ponteiro-1 img {
+	animation: rotatePont1 12s infinite linear;
+}
+
+.ponteiro-2 img {
+	animation: rotatePont2 12s infinite linear;
+}
+
+/* Animação dos ponteiros */
+@keyframes rotatePont2 {
+	0% {
+		transform: rotateZ(-45deg);
+	}
+	10% {
+		transform: rotateZ(20deg);
+	}
+	20% {
+		transform: rotate(90deg);
+	}
+	30% {
+		transform: rotateZ(75deg);
+	}
+	40% {
+		transform: rotateZ(140deg);
+	}
+	50% {
+		transform: rotateZ(170deg);
+	}
+	60% {
+		transform: rotateZ(155deg);
+	}
+	70% {
+		transform: rotateZ(180deg);
+	}
+	80% {
+		transform: rotateZ(200deg);
+	}
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+@keyframes rotatePont1 {
+	0% {
+		transform: rotateZ(-39deg);
+	}
+	10% {
+		transform: rotateZ(20deg);
+	}
+	20% {
+		transform: rotateZ(90deg);
+	}
+	30% {
+		transform: rotateZ(0deg);
+	}
+	40% {
+		transform: rotateZ(60deg);
+	}
+	50% {
+		transform: rotateZ(90deg);
+	}
+	60% {
+		transform: rotateZ(0deg);
+	}
+	70% {
+		transform: rotateZ(60deg);
+	}
+	80% {
+		transform: rotateZ(90deg);
+	}
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
